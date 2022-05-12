@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="{{url_for('index')}} " method="POST">
+        {{ logform.hidden_tag() }}
+        {{ logform.username.label }} {{logform.username}} <br>
+        {{logform.password.label}} {{logform.password}}
+        {{logform.submit}}
+    </form>
+    <a onclick="clr()" href="{{url_for('sign')}}">SignUp</a>
+{% endblock %}

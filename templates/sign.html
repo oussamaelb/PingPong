@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="{{url_for('sign')}} " method="POST">
+    {{ sform.hidden_tag() }}
+    {{ sform.username.label }} {{sform.username}} <br>
+    {{ sform.email.label }} {{sform.email}} <br>
+    {{sform.password.label}} {{sform.password}} <br>
+    {{ sform.confermpassword.label }} {{sform.confermpassword}}
+    {{sform.submit}}
+</form>
+<a href="{{url_for('login')}}">Login</a>
+{% endblock %}

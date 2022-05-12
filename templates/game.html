@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="game">
+        <div class="score">0</div>
+        <div class="ball"></div>
+        <div class="raquette"></div>
+    </div>
+    <a  onclick="clr()" href="{{url_for('login')}}">Login</a>
+    <a onclick="clr()" href="{{url_for('sign')}}">SignUp</a>
+
+{% endblock %}

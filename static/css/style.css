@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+}
+header{
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(136, 136, 221);
+    font-size: 17px;
+    
+}
+.game{
+    border: 0.1px solid;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 6px 6px 6px rgb(194, 194, 194);
+    position: relative;
+}
+.ball{
+    border: 0.1px solid;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(26, 255, 122);
+}
+.raquette{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 0.1px solid;
+    width: 15px;
+    height: 60px;
+    background-color: rgb(26, 255, 122);
+}
+.score{
+    background-color: darkolivegreen;
+    width: 50px;
+    height: 50px;
+    border: 0.1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: white;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(136, 136, 221);
+    font-size: 17px;
+}
