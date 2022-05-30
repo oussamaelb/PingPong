@@ -3,10 +3,14 @@
 }
 header{
     text-align: center;
-    padding: 5px;
-    background-color: rgb(136, 136, 221);
+    padding: 19px;
+    background-color: rgb(63, 63, 63);
     font-size: 17px;
-    
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: #ebeaea;
 }
 .game{
     border: 0.1px solid;
@@ -21,7 +25,30 @@ header{
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    background-color: rgb(26, 255, 122);
+    background-color: rgb(255, 163, 26);
+}
+.login{
+    background-color: rgb(221, 221, 221);
+    width: max-content;
+    padding: 18px;
+    margin: 10px;
+    border-radius:10px ;
+    box-shadow: 3px 3px 5px rgb(163, 163, 163);
+}
+.users{
+    text-decoration: none;
+    margin: 8px;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgb(163, 163, 163);;
+}
+.sign{
+    text-decoration: none;
+    border-radius: 3px;
+    margin-left: 95px;
+    padding: 5px;
+    background-color: rgb(228, 228, 228);
+    box-shadow: 3px 3px 5px rgb(163, 163, 163);;
 }
 .raquette{
     position: absolute;
@@ -30,10 +57,10 @@ header{
     border: 0.1px solid;
     width: 15px;
     height: 60px;
-    background-color: rgb(26, 255, 122);
+    background-color: rgb(255, 163, 26);
 }
 .score{
-    background-color: darkolivegreen;
+    background-color: rgb(192, 132, 30);
     width: 50px;
     height: 50px;
     border: 0.1px solid;
@@ -47,7 +74,9 @@ footer{
     position: fixed;
     bottom: 0;
     text-align: center;
-    padding: 5px;
-    background-color: rgb(136, 136, 221);
+    padding: 15px;
+    background-color: rgb(61, 61, 61);
     font-size: 17px;
+    color: white;
+    width: 100%;
 }

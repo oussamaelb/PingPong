@@ -1,6 +1,7 @@
 let myraquette=document.querySelector('.raquette')
 let myball=document.querySelector('.ball')
 let myscore=document.querySelector('.score')
+let mygame=document.querySelector('.game')
 b=0
 a=0
 function moveraquette(e){
@@ -42,6 +43,12 @@ function moveball(){
     }
     if (x>=359){
         clearInterval(myInterval)
+        let lose=document.createElement('div')
+        let mytext=document.createTextNode('You Lose !')
+        lose.appendChild(mytext)
+        lose.setAttribute('style','border:0.1px solid;border-radius:3px;padding:10px;width:max-content;position:absolute;right:40%;bottom:46%;background-color: rgb(225, 225, 225);')
+        mygame.append(lose)
+
     }
 }
 myInterval=setInterval(moveball,30)

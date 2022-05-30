@@ -2,11 +2,12 @@
 
 {% block content %}
 
-    <form action="{{url_for('index')}} " method="POST">
+    <form class="login" action="{{url_for('index')}} " method="POST">
         {{ logform.hidden_tag() }}
-        {{ logform.username.label }} {{logform.username}} <br>
+        {{ logform.username.label }} {{logform.username}} <br> <br>
         {{logform.password.label}} {{logform.password}}
         {{logform.submit}}
     </form>
-    <a onclick="clr()" href="{{url_for('sign')}}">SignUp</a>
+    <a class="sign" onclick="clr()" href="{{url_for('sign')}}">SignUp</a>
+    <a class='users' onclick="clr()" href="{{url_for('users')}}">Users</a>
 {% endblock %}

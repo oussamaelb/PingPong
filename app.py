@@ -25,16 +25,16 @@ class Users(db.Model):
     password=db.Column(db.String(64))
     score=db.Column(db.Integer)
 db.create_all()
-
+l=[]
 @app.route('/',methods=['GET','POST'])
 def index():
+    global l
     logform=loginForm()
     users=Users.query.all()
     if request.method=='POST':
         for i in users:
-            if i.username==logform.username.data:
-                flash('Hello')
-                flash(i.username)
+            if i.username==logform.username.data and i.password==logform.password.data:
+                l.append(i.username)
                 return redirect(url_for('game'))
         flash('SignUp Please ! ')
         return redirect(url_for('sign'))
@@ -49,11 +49,9 @@ def login():
 def sign():
     sform=signForm()
     users=Users.query.all()
-    print('gg')
     if request.method=='POST':
         for i in users: 
-            print('hh')
-            if i.username==sform.username.data:
+            if i.username==sform.username.data  :
                 flash('Already Used')
                 return render_template('sign.html',sform=sform)
         u=Users(username=sform.username.data,password=sform.password.data)
@@ -63,8 +61,15 @@ def sign():
     return render_template('sign.html',sform=sform)
 @app.route('/game',methods=['GET','POST'])
 def game():
+    global l
+    print(l)
+    flash('Welcome')
+    flash(l[-1])
     return render_template('game.html')
-
+@app.route('/users',methods=['GET','POST'])
+def users():
+    U=Users.query.all()
+    return render_template('users.html',U=U)
 
 if __name__=='__main__' :
     app.run(debug=True)
